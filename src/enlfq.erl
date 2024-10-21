@@ -35,7 +35,7 @@ pop(_QueueRef) ->
 
 load_nif() ->
   SoName = get_priv_path(?MODULE),
-  io:format(<<"Loading library: ~p ~n">>, [SoName]),
+  % io:format(<<"Loading library: ~p ~n">>, [SoName]),
   ok = erlang:load_nif(SoName, 0).
 
 get_priv_path(File) ->
